@@ -1,0 +1,118 @@
+@import "../../config/config";
+.IPAddress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: 0 auto;
+  z-index: 1000;
+  & > * {
+    margin-top: 1.5rem;
+  }
+
+  &__header {
+    color: white;
+    font-family: $font-family;
+    font-size: $font-size-lg;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div {
+      position: relative;
+      width: 45%;
+    }
+    input {
+      padding: 1rem;
+      outline: none;
+      width: 100%;
+      font-family: $font-family;
+      font-size: $font-size-md;
+      color: black;
+      border: none;
+      font-weight: 400;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+      &::placeholder {
+        font-weight: 500;
+        font-family: $font-family;
+        font-size: $font-size-md;
+        color: $dark-gray;
+      }
+    }
+    p.IPAddress__error {
+      position: absolute;
+      left: 0;
+      font-size: $font-size-sm-md;
+      color: yellow;
+      font-family: $font-family;
+      padding-left: 1rem;
+      bottom: -1.2rem;
+    }
+    button {
+      cursor: pointer;
+      display: flex;
+      border: none;
+      background-color: black;
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      align-items: center;
+      align-self: stretch;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      &:active {
+        background-color: rgb(40, 40, 40);
+      }
+    }
+  }
+  .IP__info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+    border: none;
+    border-radius: 0.5rem;
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px 0 gray;
+    &__box {
+      flex: 1;
+      padding: 2rem;
+      .IP__info__title {
+        font-size: $font-size-sm;
+        color: $very-dark-gray;
+        font-family: $font-family;
+        font-weight: 700;
+      }
+      .IP__info__value {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        height: 3rem;
+        margin-top: 0.5rem;
+        font-size: $font-size-md-lg;
+        color: black;
+        font-family: $font-family;
+        font-weight: 500;
+      }
+    }
+    .vr {
+      width: 0.05rem;
+      align-self: stretch;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      background-color: $dark-gray;
+    }
+  }
+}
+
+@import "./IPAddressMobile";

@@ -1,0 +1,26 @@
+.Layout {
+  position: relative;
+}
+.Layout__container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .Layout__background__image {
+    flex: 3.5;
+    object-fit: cover;
+  }
+  .Layout__background__leaflet {
+    flex: 6.5;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .Layout__container {
+    .Layout__background__image {
+      flex: 4;
+    }
+    .Layout__background__leaflet {
+      flex: 6;
+    }
+  }
+}
